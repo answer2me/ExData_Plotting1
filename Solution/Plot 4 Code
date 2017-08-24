@@ -1,4 +1,4 @@
-#create plot
+#create a plot
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
 with(data, {
   plot(Global_active_power~DateTime, type="l", 
@@ -14,6 +14,7 @@ with(data, {
   plot(Global_reactive_power~DateTime, type="l", 
        ylab="Global Rective Power (kilowatts)",xlab="", cex=0.8)
 })
+
 #create png
 dev.copy(png, file="plot4.png", height=480, width=480)
 dev.off()
